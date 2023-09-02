@@ -8,6 +8,10 @@ import About from "./components/About/About";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import MyResume from './components/Resume/MyResume';
+import Projects from './components/Projects/Projects';
+import BlogPage from './components/Blog/Blog';
+
 
 function App() {
   const [load, updateLoad] = useState(true)
@@ -29,11 +33,11 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Navigate to="/"/>} />
+          <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Navigate to="/"/>} />
+          <Route path="/resume" element={<MyResume />} />
           <Route path="/miniProjects" element={<Navigate to="/"/>} />
-          <Route path="/blog" element={<Navigate to="/"/>} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
