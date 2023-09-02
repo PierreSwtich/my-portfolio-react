@@ -44,10 +44,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<MyResume />} />
           <Route path="/miniProjects" element={<Navigate to="/"/>} />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/old-blog" element={<BlogPage />} />
           <Route path="*" element={<Navigate to="/"/>} />
-          <Route path="/blog-home" element={<HomeBlog data={getData}/> } />
-          <Route path="/blog:id" element={<BlogPost content={getBlogContent} />} />
+          <Route path="/blog" element={<HomeBlog data={getData}/> } />
+          <Route path="/blog/:id" element={<BlogPost content={getBlogContent} />} />
         </Routes>
         <Footer />
       </div>
