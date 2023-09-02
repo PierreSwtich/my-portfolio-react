@@ -1,25 +1,56 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "QAwithPierre",
+  "name": "Portfolio - Adam Stolarski",
+  "description": "Adam Stolarski's Portfolio as a Senior Software Test Engineer",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["Professional Portfolio", "Software Testing"],
+  "author": "Adam Stolarski",
+  "version": "1.0.0",
+  "homepage_url": "https://www.qawithpierre.com/",
+  "permissions": [
+    "geolocation",
+    "notifications",
+    "camera",
+    "microphone",
+    "clipboard-read",
+    "clipboard-write"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "screenshot-1.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshot-2.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
