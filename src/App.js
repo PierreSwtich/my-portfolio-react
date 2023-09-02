@@ -11,6 +11,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MyResume from './components/Resume/MyResume';
 import Projects from './components/Projects/Projects';
 import BlogPage from './components/Blog/Blog';
+import HomeBlog from './components/NewBlog/HomeBlog'
+import BlogPost from './components/NewBlog/BlogPost'
 
 
 function App() {
@@ -22,6 +24,11 @@ function App() {
     }, 1200);
     return () => clearTimeout(timer)
   });
+
+  const [getBlogContent, setGetBlogContent] = useState([]);
+  const getData = (blog) => {
+    setGetBlogContent(blog)
+  }
 
 
   return (
@@ -39,6 +46,8 @@ function App() {
           <Route path="/miniProjects" element={<Navigate to="/"/>} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="/blog-home" element={<HomeBlog data={getData}/> } />
+          <Route path="/blog:id" element={<BlogPost content={getBlogContent} />} />
         </Routes>
         <Footer />
       </div>
