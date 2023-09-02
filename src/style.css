@@ -395,6 +395,17 @@ button:focus {
   z-index: 1001;
 }
 
+.butter-cms {
+  display: inline-block !important;
+  height: auto;
+  width: auto;
+}
+
+li.butter-cms a img {
+  max-width: 120px;
+  max-height: 25px;
+}
+
 .icon-colour {
   color: #525ece !important;
 }
