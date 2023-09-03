@@ -150,14 +150,16 @@ input {
 .blogItem-wrap h3 {
   margin: 0.5rem 0 1rem 0;
   flex: 1;
+  color: #ffffff;
 }
 .blogItem-desc {
   position: relative;
-  max-height: 50px;
+  max-height: 60px;
   overflow: hidden;
   padding-right: 0.6rem;
   font-size: 0.8rem;
   color: #a9a9a9;
+  font-weight: bold;
 }
 .blogItem-desc::before {
   position: absolute;
@@ -190,6 +192,10 @@ input {
   font-size: 0.6rem;
   color: #a9a9a9;
   font-weight: 600;
+}
+.blogItem-author div h6 {
+  color: #525ece;
+  font-weight: bold;
 }
 /* Empty List */
 .emptyList-wrap {
