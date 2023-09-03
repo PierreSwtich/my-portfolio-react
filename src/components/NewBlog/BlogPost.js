@@ -9,7 +9,7 @@ import ParticlesComponent from '../Particles';
 
 const Blog = ({content}) => {
   return (
-    <container>
+    <container className=".blogContainer">
       <ParticlesComponent />
       <Link className='blog-goBack' to='/blog'>
         <span> &#8592;</span> <span>Go Back</span>
