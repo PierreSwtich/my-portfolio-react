@@ -25,8 +25,8 @@ input {
 }
 /* BlogPost */
 .blog-wrap {
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
 }
 .blog-goBack {
   text-decoration: none;
@@ -42,6 +42,10 @@ input {
 }
 .blog-wrap header p {
   color: #ffffff !important;
+}
+.blog-wrap header h1 {
+  color: #ffffff !important;
+  font-weight: bold;
 }
 .blog-date {
   font-size: 0.8rem;
