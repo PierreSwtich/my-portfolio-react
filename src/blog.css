@@ -16,6 +16,8 @@ input {
 .blog-main-wrapper {
     margin-bottom: 30px;
     margin-top: 50px;
+    z-index: 1;
+    position: relative;
 }
 .container {
   max-width: 1140px;
@@ -27,6 +29,8 @@ input {
 .blog-wrap {
   max-width: 800px;
   margin: 0 auto 50px auto;
+  z-index: 1;
+  position: relative;
 }
 .blog-goBack {
   text-decoration: none;
@@ -35,6 +39,8 @@ input {
   font-weight: 500;
   margin: 110px 0 0 110px;
   display: block;
+  z-index: 1;
+  position: relative;
 }
 .blog-wrap header {
   text-align: center;

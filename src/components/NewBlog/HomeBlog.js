@@ -44,7 +44,7 @@ useEffect(() => {
 
 
   return (
-    <container>
+    <container className=".blogContainer">
     <ParticlesComponent />
     <div className='blog-main-wrapper'>
       {/* Page Header */}
