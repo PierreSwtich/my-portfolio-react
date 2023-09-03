@@ -33,11 +33,15 @@ input {
   font-size: 0.8rem;
   color: #a9a9a9;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin: 110px 0 0 110px;
   display: block;
 }
 .blog-wrap header {
   text-align: center;
+  margin-bottom: 50px;
+}
+.blog-wrap header p {
+  color: #ffffff !important;
 }
 .blog-date {
   font-size: 0.8rem;
@@ -56,9 +60,11 @@ input {
 }
 .blog-content p{
   margin-top: 1.5rem;
+  color: #e9e7e7 !important;
 }
 .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6 {
   margin-top: 1.5rem;
+  color:#f0f0f0 !important;
 }
 
 .blog-content img {
@@ -160,6 +166,7 @@ input {
   font-size: 0.8rem;
   color: #a9a9a9;
   font-weight: bold;
+  font-weight: 400 !important;
 }
 .blogItem-desc::before {
   position: absolute;
@@ -191,7 +198,8 @@ input {
 .blogItem-author p {
   font-size: 0.6rem;
   color: #a9a9a9;
-  font-weight: 600;
+  font-weight: 400;
+  margin-bottom: 0 !important;
 }
 .blogItem-author div h6 {
   color: #525ece;

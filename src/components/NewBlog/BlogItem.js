@@ -9,8 +9,8 @@ import { BsArrowRightShort } from 'react-icons/bs';
 
 
 const BlogItem = ({blog, content}) => {
-  const createdDate = new Date(content.created)
-  const formattedDate = createdDate.toLocaleDateString();
+  // const createdDate = content.created
+  // const formattedDate = createdDate.toLocaleDateString();
   
   return (
    <div className='blogItem-wrap' key={blog.title}>
@@ -25,7 +25,7 @@ const BlogItem = ({blog, content}) => {
           <img src={blog.author.profile_image} alt='avatar' />
           <div>
             <h6>{blog.author.first_name+" "+blog.author.last_name}</h6>
-            <p>{formattedDate}</p>
+            <p>{content.created}</p>
           </div>
         </div>
         <Link className='blogItem-link' to={`/blog/${blog.title}`} onClick={()=>{content(blog)}}>
