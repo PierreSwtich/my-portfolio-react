@@ -43,6 +43,10 @@ input {
 .blog-wrap header p {
   color: #ffffff !important;
 }
+.blog-wrap header h1 {
+  color: #ffffff !important;
+  font-weight: bold;
+}
 .blog-date {
   font-size: 0.8rem;
   color: #a9a9a9;
