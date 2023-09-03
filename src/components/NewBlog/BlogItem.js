@@ -29,7 +29,7 @@ const BlogItem = ({blog, content}) => {
           </div>
         </div>
         <Link className='blogItem-link' to={`/blog/${blog.title}`} onClick={()=>{content(blog)}}>
-          <BsArrowRightShort />
+          <BsArrowRightShort style={{fill: 'white'}}/>
         </Link>
       </footer>
     </div>
