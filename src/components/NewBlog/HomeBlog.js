@@ -5,6 +5,7 @@ import BlogList from './BlogList';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import { blogList } from './config/Api';
+import ParticlesComponent from '../Particles';
 
 const HomePage = ({data}) => {
   // get content from buttercms
@@ -43,6 +44,8 @@ useEffect(() => {
 
 
   return (
+    <container>
+    <ParticlesComponent />
     <div className='blog-main-wrapper'>
       {/* Page Header */}
       <Header />
@@ -56,6 +59,7 @@ useEffect(() => {
       {/* Blog List & Empty View */}
       {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} content = {BlogContent}/>}
     </div>
+    </container>
   );
 };
 export default HomePage;

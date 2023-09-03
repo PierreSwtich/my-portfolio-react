@@ -5,10 +5,12 @@ import Chip from './Chip';
 import EmptyList from './EmptyList';
 import '../../blog.css';
 import { Link } from 'react-router-dom';
+import ParticlesComponent from '../Particles';
 
 const Blog = ({content}) => {
   return (
-    <>
+    <container>
+      <ParticlesComponent />
       <Link className='blog-goBack' to='/blog'>
         <span> &#8592;</span> <span>Go Back</span>
       </Link>
@@ -31,7 +33,7 @@ const Blog = ({content}) => {
       ) : (
         <EmptyList />
       )}
-    </>
+    </ container>
   );
 };
 
