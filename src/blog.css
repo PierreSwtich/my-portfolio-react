@@ -122,6 +122,8 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
+  max-width: 80%;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .blogList-wrap {
