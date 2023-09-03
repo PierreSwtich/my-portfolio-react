@@ -6,10 +6,14 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import { Helmet } from "react-helmet";
 
 function About() {
   return (
     <Container fluid className="about-section">
+      <Helmet>
+        <title>QAwithPierre | About Me!</title>
+      </Helmet>
       <ParticlesComponent />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
