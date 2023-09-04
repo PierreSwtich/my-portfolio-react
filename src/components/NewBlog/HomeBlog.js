@@ -6,6 +6,7 @@ import Header from './Header';
 import SearchBar from './SearchBar';
 import { blogList } from './config/Api';
 import ParticlesComponent from '../Particles';
+import { Helmet } from 'react-helmet';
 
 const HomePage = ({data}) => {
   // get content from buttercms
@@ -45,6 +46,30 @@ useEffect(() => {
 
   return (
     <container className=".blogContainer">
+      <Helmet>
+        <title>QAwithPierre | Blog</title>
+        <meta name="description" content="Read my blog posts about manual testing and automation in the software industry." />
+
+        {/* Google / Search Engine Tags */}
+        <meta name="author" content="Adam Stolarski" />
+        <meta itemprop="name" content="QAwithPierre | Blog" />
+        <meta itemprop="description" content="Read my blog posts about manual testing and automation in the software industry." />
+        <meta itemprop="image" content="https://qawithpierre.pl/your-image-url.jpg" />
+
+        {/* Facebook Meta Tags */}
+        <meta property="og:url" content="https://qawithpierre.pl/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="QAwithPierre | Blog" />
+        <meta property="og:description" content="Read my blog posts about manual testing and automation in the software industry." />
+        <meta property="og:image" content="https://qawithpierre.pl/your-image-url.jpg" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@YourTwitterHandle" />
+        <meta name="twitter:title" content="QAwithPierre | Blog" />
+        <meta name="twitter:description" content="Read my blog posts about manual testing and automation in the software industry." />
+        <meta name="twitter:image" content="https://qawithpierre.pl/your-image-url.jpg" />
+      </Helmet>
     <ParticlesComponent />
     <div className='blog-main-wrapper'>
       {/* Page Header */}

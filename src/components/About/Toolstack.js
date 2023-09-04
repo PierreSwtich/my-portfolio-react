@@ -30,7 +30,7 @@ function Toolstack({containerRef}) {
     {icon: SiCypress, name: 'Cypress'},
     {icon: SiJira, name: 'Jira'},
     {icon: SiFigma, name: 'Figma'},
-    {icon: SiAdobexd, name: 'Adobve XD'},
+    {icon: SiAdobexd, name: 'Adobe XD'},
     {icon: SiShopify, name: 'Shopify'},
   ]
 
