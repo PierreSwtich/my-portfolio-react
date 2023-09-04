@@ -11,7 +11,6 @@ function Home() {
     <section>
       <Container fluid className="home-section" id="home">
         <Helmet>
-          <meta name="theme-color" content="#000000" />
           <meta name="description" content="Web site created using create-react-app" />
           <title>QAwithPierre | Portfolio</title>
           <meta name="description" content="Adam Stolarski's portfolio, showcasing expertise in software testing and development." />
