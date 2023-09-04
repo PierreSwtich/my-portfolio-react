@@ -32,9 +32,9 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(90, 115, 300)" }}>
-            "Innovate to make a difference, think out of the box to make a real difference!"{" "}
+            "Nobody will ever see it, but You'll know it's there. For you to sleep at night, the quality must be carried all the way through."{" "}
           </p>
-          <footer className="blockquote-footer">Pierre</footer>
+          <footer className="blockquote-footer">Steve Jobs</footer>
         </blockquote>
       </Card.Body>
     </Card>

@@ -13,6 +13,27 @@ function About() {
     <Container fluid className="about-section">
       <Helmet>
         <title>QAwithPierre | About Me!</title>
+        <meta name="description" content="A brief overview of my background, tech skills, and tech stack." />
+
+        {/* Google / Search Engine Tags */}
+        <meta name="author" content="Adam Stolarski" />
+        <meta itemprop="name" content="QAwithPierre | About Me!" />
+        <meta itemprop="description" content="A brief overview of my background, tech skills, and tech stack." />
+        <meta itemprop="image" content="https://qawithpierre.pl/your-image-url.jpg" />
+
+          {/* Facebook Meta Tags */}
+        <meta property="og:url" content="https://qawithpierre.pl/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="QAwithPierre | About Me!" />
+        <meta property="og:description" content="A brief overview of my background, tech skills, and tech stack." />
+        <meta property="og:image" content="https://qawithpierre.pl/your-image-url.jpg" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@YourTwitterHandle" />
+        <meta name="twitter:title" content="QAwithPierre | About Me!" />
+        <meta name="twitter:description" content="A brief overview of my background, tech skills, and tech stack." />
+        <meta name="twitter:image" content="https://qawithpierre.pl/your-image-url.jpg" />
       </Helmet>
       <ParticlesComponent />
       <Container>
