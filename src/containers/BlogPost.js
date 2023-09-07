@@ -41,8 +41,6 @@ const ArticlePage = () => {
   //   return console.log(butterFetchSinglePost(slug))
   // }
 
-  console.log(content + " TO JEST TO CO ZWROCIŁO")
-
   // const [promise, setPromise] = useState();
 
   
