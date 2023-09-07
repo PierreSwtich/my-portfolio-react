@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../blog.css';
-const Header = () => (
+import '../../Assets/css/blog.css';
+const BlogHeader = () => (
   <header className='home-header'>
     <h2>My Personal Blog</h2>
     <h1>
@@ -11,4 +11,4 @@ const Header = () => (
     </p>
   </header>
 );
-export default Header;
+export default BlogHeader;

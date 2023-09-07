@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import Chip from './Chip';
-import '../../blog.css';
+import '../../Assets/css/blog.css';
 import { BsArrowRightShort } from 'react-icons/bs';
 
 
@@ -13,8 +13,8 @@ const BlogItem = ({blog, content}) => {
   // const formattedDate = createdDate.toLocaleDateString();
   
   return (
-   <div className='blogItem-wrap' key={blog.title}>
-      <Link to={`/blog/${blog.title}`} onClick={() => content(blog)}>
+   <div className='blogItem-wrap'>
+      <Link to={`/new-blog/${blog.slug}`} onClick={() => content(blog)}>
       <img className='blogItem-cover' src={blog.featured_image} alt='cover' />
       </Link>
       <Chip label={blog.tags[0].name} />
@@ -28,7 +28,7 @@ const BlogItem = ({blog, content}) => {
             <p>{content.created}</p>
           </div>
         </div>
-        <Link className='blogItem-link' to={`/blog/${blog.title}`} onClick={()=>{content(blog)}}>
+        <Link className='blogItem-link' to={`/new-blog/${blog.slug}`} onClick={()=>{content(blog)}}>
           <BsArrowRightShort style={{fill: 'white'}}/>
         </Link>
       </footer>
