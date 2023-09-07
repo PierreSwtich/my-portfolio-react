@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ParticlesComponent from "../Particles";
-import Github from "./Github";
-import Techstack from "./Techstack";
-import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
+import ParticlesComponent from "../components/Particles";
+import Github from "../components/About/Github";
+import Techstack from "../components/About/Techstack";
+import Aboutcard from "../components/About/AboutCard";
+import laptopImg from "../Assets/images/about.png";
+import Toolstack from "../components/About/Toolstack";
 import { Helmet } from "react-helmet";
 
 function About() {

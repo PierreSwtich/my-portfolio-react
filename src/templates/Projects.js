@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import ParticlesComponent from "../Particles";
-import placeholder from "../../Assets/project-test.png"
+import ProjectCard from "../components/Projects/ProjectCards";
+import ParticlesComponent from "../components/Particles";
+import placeholder from "../Assets/images/project-test.png"
 import { Helmet } from "react-helmet";
 // import MainCardProjectChoose from "./MainCards";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/new-background.svg";
-import Home2 from "./Home2";
-import Type from "./Type";
-import ParticlesComponent from "../Particles";
+import homeLogo from "../Assets/svg/new-background.svg";
+import Home2 from "../components/Home/Home2";
+import Type from "../components/Home/Type";
+import ParticlesComponent from "../components/Particles";
 import { Helmet } from "react-helmet";
 
 function Home() {

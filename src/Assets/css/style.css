@@ -33,7 +33,7 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: #0c0513;
-  background-image: url(./Assets/pre2.svg);
+  background-image: url(../svg/pre2.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -87,6 +87,8 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  backdrop-filter: blur(15px); 
+  /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
 .navbar-toggler {

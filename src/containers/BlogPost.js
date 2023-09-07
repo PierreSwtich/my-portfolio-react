@@ -1,18 +1,75 @@
-import {React} from 'react';
 // eslint-disable-next-line no-unused-vars
-import Chip from './Chip';
+import {React, Suspense, useEffect} from 'react';
 // eslint-disable-next-line no-unused-vars
-import EmptyList from './EmptyList';
-import '../../blog.css';
-import { Link } from 'react-router-dom';
-import ParticlesComponent from '../Particles';
+import Chip from '../components/NewBlog/Chip';
+// eslint-disable-next-line no-unused-vars
+import EmptyList from '../components/NewBlog/EmptyList';
+import '../Assets/css/blog.css';
+import { Link, useParams } from 'react-router-dom';
+import ParticlesComponent from '../components/Particles';
 import { Helmet } from 'react-helmet';
+import { usePromise } from '../utils/usePromise';
+import { butterFetchSinglePost } from '../utils/API/butterFetchSinglePost';
+import Preloader from "../components/Pre";
 
-const Blog = ({content}) => {
+export const PostPage = () => {
+  return (
+    <Suspense fallback={<span>Loading...</span>}>
+      <ArticlePage />
+    </Suspense>
+    );
+
+}
+
+const ArticlePage = () => {
+  const { slug } = useParams();
+
+  const content = usePromise(() => butterFetchSinglePost(slug), [slug]);
+
+  useEffect(() => {
+    // Optionally, you can add any additional logic here
+    // For example, you can scroll to the top of the page when the content is loaded
+    window.scrollTo(0, 0);
+  }, [content]);
+
+  if(!content) {
+    return <Preloader />
+  }
+
+//without it it does not work :clown:
+  // if (!content) {
+  //   return console.log(butterFetchSinglePost(slug))
+  // }
+
+  // const [promise, setPromise] = useState();
+
+  
+
+  // if (content === null) return (<div>Sorry i broke the code..</div>)
+
+  // useEffect(() => {
+  //   setPromise(fetchSinglePost(slug))
+  // }, [slug])
+
+  // useEffect(() => {
+  //   const fetchPost = async () => {
+  //     try {
+  //       const post = await fetchSinglePost(slug).read();
+  //       console.log(post)
+  //     } catch (error) {
+  //       console.log('Error fetching post: ', error)
+  //     }
+  //   };
+  //   fetchPost();
+  // }, [slug]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // const fetchPromise = useMemo(() => fetchSinglePost(slug), []);
+  // if (promise == null) return (null)
+  // const content = promise.read();
   return (
     <container className=".blogContainer">
       <Helmet>
-        <title>QAwithPierre | {content.title}</title>
+        <title>QAwithPierre | {content.seo_title}</title>
         <meta name="description" content={content.meta_description} />
 
         {/* Google / Search Engine Tags */}
@@ -36,7 +93,7 @@ const Blog = ({content}) => {
         <meta name="twitter:image" content={content.featured_image} />
       </Helmet>
       <ParticlesComponent />
-      <Link className='blog-goBack' to='/blog'>
+      <Link className='blog-goBack' to='/new-blog'>
         <span> &#8592;</span> <span>Go Back</span>
       </Link>
       {content ? (
@@ -46,9 +103,9 @@ const Blog = ({content}) => {
             <h1 id='dynamicTitle'>{content.title}</h1>
             <div className='blog-subCategory'>
               
-                <div>
+                {/* <div>
                   <Chip label={content.tags[0].name} />
-                </div>
+                </div> */}
               
             </div>
           </header>
@@ -63,4 +120,4 @@ const Blog = ({content}) => {
 };
 
 
-export default Blog;
+export default ArticlePage;

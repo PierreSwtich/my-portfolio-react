@@ -108,7 +108,7 @@ const ParticlesComponent = () => {
             }
         };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, {});
+    }, []);
 
 const particlesInit = useCallback((engine) => {
     loadSlim(engine)
