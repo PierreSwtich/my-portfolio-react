@@ -281,3 +281,11 @@ input {
   width: 100%;
   height: fit-content;
 }
+
+.blog-content > ol > li {
+ color: #a9a9a9;
+}
+
+.blog-content > ol > li > strong {
+  color: #6c7afc;
+}
