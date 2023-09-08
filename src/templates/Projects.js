@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCards";
 import ParticlesComponent from "../components/Particles";
-import placeholder from "../Assets/images/project-test.png"
 import { Helmet } from "react-helmet";
+import { projectsList } from "../constants/projects/allProjects";
 // import MainCardProjectChoose from "./MainCards";
 
 function Projects() {
@@ -42,71 +42,18 @@ function Projects() {
           Here are a few small projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Test"
-              description="Test"
-              ghLink="#"
-              demoLink="#"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Test"
-              description="Test"
-              ghLink="#"
-              demoLink="#"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Test"
-              description="Test"
-              ghLink="#"
-              demoLink="#"            
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Test"
-              description="Test"
-              ghLink="#"
-              demoLink="#"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Test"
-              description="Test"
-              ghLink="#"
-              demoLink="#"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Test Title"
-              description="Test Description"
-              ghLink="#"
-              demoLink="#"
-            />
-          </Col>
+          {projectsList.map((project, index) => (
+            <Col key={index} md={4} className="project-card">
+              <ProjectCard
+                imgPath={project.imgPath}
+                isBlog={project.isBlog}
+                title={project.title}
+                description={project.description}
+                ghLink={project.ghLink}
+                demoLink={project.demoLink}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>

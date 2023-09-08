@@ -1,19 +1,21 @@
 import React from "react"
-import Header from "./Header"
+import NavigationBar from "./Navbar"
 import Footer from "./Footer"
-import ScrollToTop from "../containers/ScrollToTop"
+import ScrollToTop from '../components/ScrollToTop'
 
 const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
+    <div className="page-wrapper" data-testid="page-wrapper">
+      <NavigationBar />
 
       {children}
 
       <ScrollToTop />
 
       <Footer />
+      </div>
     </>
   )
 }

@@ -274,3 +274,10 @@ input {
   margin: 7px!important;
   padding: 0 !important;
 }
+
+.content-loader-wrapper {
+  margin-top: 40px;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}

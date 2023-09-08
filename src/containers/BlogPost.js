@@ -10,7 +10,8 @@ import ParticlesComponent from '../components/Particles';
 import { Helmet } from 'react-helmet';
 import { usePromise } from '../utils/usePromise';
 import { butterFetchSinglePost } from '../utils/API/butterFetchSinglePost';
-import Preloader from "../components/Pre";
+// import Preloader from "../components/Pre";
+import ContentLoader from '../components/ContentLoader';
 
 export const PostPage = () => {
   return (
@@ -27,45 +28,13 @@ const ArticlePage = () => {
   const content = usePromise(() => butterFetchSinglePost(slug), [slug]);
 
   useEffect(() => {
-    // Optionally, you can add any additional logic here
-    // For example, you can scroll to the top of the page when the content is loaded
     window.scrollTo(0, 0);
   }, [content]);
 
   if(!content) {
-    return <Preloader />
+    return <ContentLoader />
   }
-
-//without it it does not work :clown:
-  // if (!content) {
-  //   return console.log(butterFetchSinglePost(slug))
-  // }
-
-  // const [promise, setPromise] = useState();
-
   
-
-  // if (content === null) return (<div>Sorry i broke the code..</div>)
-
-  // useEffect(() => {
-  //   setPromise(fetchSinglePost(slug))
-  // }, [slug])
-
-  // useEffect(() => {
-  //   const fetchPost = async () => {
-  //     try {
-  //       const post = await fetchSinglePost(slug).read();
-  //       console.log(post)
-  //     } catch (error) {
-  //       console.log('Error fetching post: ', error)
-  //     }
-  //   };
-  //   fetchPost();
-  // }, [slug]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // const fetchPromise = useMemo(() => fetchSinglePost(slug), []);
-  // if (promise == null) return (null)
-  // const content = promise.read();
   return (
     <container className=".blogContainer">
       <Helmet>
