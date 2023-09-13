@@ -2,6 +2,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import butterImg from '../Assets/buttercms.png'
 
 
 function Footer() {
@@ -64,6 +65,11 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
+              </a>
+            </li>
+            <li className="butter-cms">
+              <a href="https://buttercms.com/" target="_blank" rel="noopener noreferrer">
+                <img src={butterImg} alt="butter cms" />
               </a>
             </li>
           </ul>
